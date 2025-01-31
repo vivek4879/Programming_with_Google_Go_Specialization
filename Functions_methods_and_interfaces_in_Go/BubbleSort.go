@@ -19,14 +19,6 @@ the contents of the slice in position i with the contents in position i+1.*/
 
 package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-	"strconv"
-	"strings"
-)
-
 func swap(sli []int, index int) {
 	sli[index], sli[index+1] = sli[index+1], sli[index]
 }
@@ -40,23 +32,24 @@ func BubbleSort(sli []int) {
 		}
 	}
 }
-func main() {
-	var input []int
-	fmt.Print("enter slice of ints")
-	reader := bufio.NewReader(os.Stdin)
-	line, _ := reader.ReadString('\n')
-	tokens := strings.Fields(line)
 
-	for _, token := range tokens {
-		num, err := strconv.Atoi(token)
-		if err != nil {
-			fmt.Println(err)
-		}
-		input = append(input, num)
-	}
+// func main() {
+// 	var input []int
+// 	fmt.Print("enter slice of ints")
+// 	reader := bufio.NewReader(os.Stdin)
+// 	line, _ := reader.ReadString('\n')
+// 	tokens := strings.Fields(line)
 
-	BubbleSort(input)
+// 	for _, token := range tokens {
+// 		num, err := strconv.Atoi(token)
+// 		if err != nil {
+// 			fmt.Println(err)
+// 		}
+// 		input = append(input, num)
+// 	}
 
-	fmt.Println("Sorted input:", input)
+// 	BubbleSort(input)
 
-}
+// 	fmt.Println("Sorted input:", input)
+
+// }
